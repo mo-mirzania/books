@@ -29,8 +29,8 @@ func GetDBHandler(dbType int, connString string) (BooksDBHandler, error) {
 	switch dbType {
 	case MYSQL:
 		return NewMySQLHandler(connString)
-		// case POSTGRESQL:
-		// 	return NewPostgreSQLHandler(connString)
+	case POSTGRESQL:
+		return NewPostgreSQLHandler(connString)
 		// case MONGODB:
 		// 	return NewMongoDBHandler(connString)
 	}
